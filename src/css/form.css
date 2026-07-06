@@ -1,0 +1,78 @@
+.form{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /*background-color: maroon;*/
+  margin-bottom: 20px;
+}
+
+.form :is(input, button){
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.form button{
+  background-color: #4E75FF;
+  color: #fff;
+}
+
+.form input{
+ border: 1px solid #ccc;
+}
+
+
+.loader {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.gallery-item .description{
+  margin: 5px 0 15px;
+  display: flex;
+  align-items: center;
+  /*background-color: #3498db;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  justify-content: space-around;
+}
+
+.gallery-item p{
+  display: flex;
+  padding-block: 5px;
+  /*background-color: red;*/
+  flex-direction: column;
+  align-items: center;
+  /*margin-bottom: 20px;*/
+  font-weight: bold;
+}
+
+.gallery-item span{
+  font-weight: normal;
+}
