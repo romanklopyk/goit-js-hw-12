@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-let PER_PAGE = 3;
+let PER_PAGE = 15;
 
 async function getImagesByQuery(query, page) {
   const response = await axios.get('https://pixabay.com/api/', {
