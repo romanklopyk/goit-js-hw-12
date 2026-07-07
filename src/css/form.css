@@ -76,3 +76,7 @@
 .gallery-item span{
   font-weight: normal;
 }
+
+.is-hidden {
+  display: none;
+}

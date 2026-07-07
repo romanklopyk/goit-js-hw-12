@@ -3,7 +3,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const $gallery = document.querySelector('.gallery');
 
-
 let gallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
@@ -12,7 +11,6 @@ let gallery = new SimpleLightbox('.gallery a', {
 });
 
 function createGallery(images){
-  // const arrOfImg = images.hits;
   const res =  images.map (obj =>{
     return `<li class="gallery-item">
                 <a href="${obj.largeImageURL}">
@@ -55,4 +53,13 @@ function hideLoader() {
   if (loader) loader.style.display = 'none';
 }
 
-export {createGallery, clearGallery, showLoader, hideLoader};
+function showLoadMoreBtn(el){
+  el.style.display = 'block';
+}
+
+function hideLoadMoreBtn(el){
+  el.style.display = 'none';
+}
+
+
+export {createGallery, clearGallery, showLoader, hideLoader, showLoadMoreBtn, hideLoadMoreBtn};
